@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { JobRole } from '@/data/jobRoles';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, Award, TrendingUp } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Briefcase, Award, TrendingUp, Linkedin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { skills } from '@/data/skills';
 
 interface JobRecommendationsProps {
@@ -14,6 +15,11 @@ const JobRecommendations: React.FC<JobRecommendationsProps> = ({ jobs }) => {
   const getSkillName = (skillId: string) => {
     const skill = skills.find(s => s.id === skillId);
     return skill ? skill.name : skillId;
+  };
+
+  const getLinkedInJobSearchUrl = (jobTitle: string) => {
+    const encodedJobTitle = encodeURIComponent(jobTitle);
+    return `https://www.linkedin.com/jobs/search/?keywords=${encodedJobTitle}`;
   };
 
   return (
@@ -61,6 +67,15 @@ const JobRecommendations: React.FC<JobRecommendationsProps> = ({ jobs }) => {
                   </div>
                 </div>
               </CardContent>
+              <CardFooter className="pt-2 pb-4">
+                <Button 
+                  variant="outline" 
+                  className="w-full border-career-blue text-career-blue hover:bg-career-blue hover:text-white"
+                  onClick={() => window.open(getLinkedInJobSearchUrl(job.title), '_blank')}
+                >
+                  <Linkedin className="h-4 w-4 mr-2" /> Find on LinkedIn
+                </Button>
+              </CardFooter>
             </Card>
           ))}
         </div>
