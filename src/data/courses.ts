@@ -1,0 +1,136 @@
+
+export interface Course {
+  id: string;
+  title: string;
+  provider: "Coursera" | "Udemy" | "edX" | "LinkedIn Learning";
+  description: string;
+  link: string;
+  duration: string;
+  cost: string;
+  relatedSkills: string[];
+  relatedInterests: string[];
+  relatedJobs: string[];
+}
+
+export const courses: Course[] = [
+  {
+    id: "cs50",
+    title: "CS50's Introduction to Computer Science",
+    provider: "edX",
+    description: "Harvard University's introduction to computer science and programming.",
+    link: "https://www.edx.org/course/cs50s-introduction-to-computer-science",
+    duration: "12 weeks",
+    cost: "Free (Certificate: $90)",
+    relatedSkills: ["javascript", "python", "problem_solving"],
+    relatedInterests: ["coding", "web_development"],
+    relatedJobs: ["software_dev"],
+  },
+  {
+    id: "react_complete",
+    title: "React - The Complete Guide",
+    provider: "Udemy",
+    description: "Dive into React, including Hooks, Redux, and more.",
+    link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+    duration: "40+ hours",
+    cost: "$19.99 - $129.99",
+    relatedSkills: ["javascript", "react"],
+    relatedInterests: ["web_development", "coding"],
+    relatedJobs: ["software_dev", "ux_designer"],
+  },
+  {
+    id: "data_science",
+    title: "Data Science Specialization",
+    provider: "Coursera",
+    description: "Learn data science fundamentals with R and Python.",
+    link: "https://www.coursera.org/specializations/data-science",
+    duration: "11 courses, 6 months",
+    cost: "$49/month",
+    relatedSkills: ["python", "data_analysis"],
+    relatedInterests: ["data_science", "research"],
+    relatedJobs: ["data_analyst"],
+  },
+  {
+    id: "ux_google",
+    title: "Google UX Design Professional Certificate",
+    provider: "Coursera",
+    description: "Launch your career in UX design with Google's program.",
+    link: "https://www.coursera.org/professional-certificates/google-ux-design",
+    duration: "6 months",
+    cost: "$39/month",
+    relatedSkills: ["ui_design", "problem_solving"],
+    relatedInterests: ["design"],
+    relatedJobs: ["ux_designer"],
+  },
+  {
+    id: "product_management",
+    title: "Product Management Fundamentals",
+    provider: "LinkedIn Learning",
+    description: "Learn core concepts of product management.",
+    link: "https://www.linkedin.com/learning/product-management-fundamentals",
+    duration: "2-3 hours",
+    cost: "$29.99 (Free with LinkedIn Premium)",
+    relatedSkills: ["project_management", "leadership", "communication"],
+    relatedInterests: ["management", "entrepreneurship"],
+    relatedJobs: ["product_manager"],
+  },
+  {
+    id: "digital_marketing",
+    title: "Digital Marketing Specialization",
+    provider: "Coursera",
+    description: "Master strategic marketing concepts and tools.",
+    link: "https://www.coursera.org/specializations/digital-marketing",
+    duration: "8 months",
+    cost: "$49/month",
+    relatedSkills: ["marketing", "communication"],
+    relatedInterests: ["marketing", "media"],
+    relatedJobs: ["digital_marketer"],
+  },
+  {
+    id: "nursing_specialization",
+    title: "Nursing Informatics Specialization",
+    provider: "Coursera",
+    description: "Leverage technology to improve patient care.",
+    link: "https://www.coursera.org/specializations/nursing-informatics",
+    duration: "5 months",
+    cost: "$49/month",
+    relatedSkills: ["patient_care", "communication"],
+    relatedInterests: ["healthcare", "tech"],
+    relatedJobs: ["nurse"],
+  },
+  {
+    id: "financial_analysis",
+    title: "Financial Analysis and Decision Making",
+    provider: "edX",
+    description: "Learn to evaluate financial information for better decision-making.",
+    link: "https://www.edx.org/professional-certificate/financial-analysis-decision-making",
+    duration: "5 courses, 4-6 months",
+    cost: "$537",
+    relatedSkills: ["accounting", "data_analysis", "problem_solving"],
+    relatedInterests: ["finance"],
+    relatedJobs: ["financial_analyst"],
+  },
+  {
+    id: "teaching_certificate",
+    title: "Teaching and Learning in Higher Education",
+    provider: "edX",
+    description: "Develop effective teaching strategies for adult learners.",
+    link: "https://www.edx.org/course/teaching-and-learning-in-higher-education",
+    duration: "8 weeks",
+    cost: "Free (Certificate: $199)",
+    relatedSkills: ["teaching", "communication"],
+    relatedInterests: ["teaching", "education"],
+    relatedJobs: ["teacher"],
+  },
+  {
+    id: "sales_strategy",
+    title: "Sales Training: Building Your Sales Career",
+    provider: "LinkedIn Learning",
+    description: "Learn fundamental sales techniques and strategies.",
+    link: "https://www.linkedin.com/learning/sales-training-building-your-sales-career",
+    duration: "2-3 hours",
+    cost: "$29.99 (Free with LinkedIn Premium)",
+    relatedSkills: ["sales", "communication", "leadership"],
+    relatedInterests: ["sales", "management"],
+    relatedJobs: ["sales_manager"],
+  },
+];
